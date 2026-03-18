@@ -1,76 +1,168 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SkillAgent — Capacitación AI para Empresas | ZXY Ventures</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-
-<script>
-  function toggleFaq(el) {
-    const a = el.nextElementSibling;
-    const icon = el.querySelector('.icon');
-    a.classList.toggle('open');
-    icon.textContent = a.classList.contains('open') ? '−' : '+';
-  }
-</script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillAgent — Capacitación AI para Empresas | ZXY Ventures</title>
+  <meta name="description" content="200M+ trabajadores en LatAm sin skills de AI. SkillAgent es el sistema de capacitación agéntico para cerrar la brecha." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .pitch-stat { text-align: center; padding: 32px 24px; }
+    .pitch-stat .num { font-family: var(--font-h); font-size: 56px; font-weight: 600; color: #fff; line-height: 1; }
+    .pitch-stat .label { font-size: 13px; color: var(--muted); margin-top: 8px; text-transform: uppercase; letter-spacing: 1px; }
+    .pitch-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin: 48px 0; }
+    .pitch-grid .pitch-stat { background: var(--bg2); }
+    .narrative { max-width: 720px; }
+    .narrative h2 { font-family: var(--font-h); font-size: 36px; margin-bottom: 20px; }
+    .narrative p { color: var(--accent2); line-height: 1.8; margin-bottom: 16px; font-size: 16px; }
+    .section-tag { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .section-tag::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .vision-box { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 48px; margin: 48px 0; }
+    .vision-box blockquote { font-family: var(--font-h); font-size: 28px; line-height: 1.4; color: #fff; border: none; padding: 0; margin: 0; }
+    .cta-minimal { text-align: center; padding: 80px 0; }
+    .cta-minimal h2 { font-family: var(--font-h); font-size: 48px; margin-bottom: 16px; }
+    .cta-minimal p { color: var(--muted); margin-bottom: 32px; }
+    @media (max-width: 640px) { .pitch-grid { grid-template-columns: 1fr; } .pitch-stat .num { font-size: 40px; } }
+  </style>
 </head>
 <body>
-<nav><div class="container inner">
-  <a href="https://zxy.vc" style="font-size:12px;color:var(--muted);font-family:var(--font-b);letter-spacing:0.5px;display:inline-flex;align-items:center;gap:4px;opacity:0.7;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">← zxy.vc</a>
-  <span class="brand">ZXY <span>Ventures</span></span>
-  <a href="mailto:fran@zxy.vc" class="btn-primary" style="padding:8px 20px;font-size:.85rem;">Contactar</a>
-</div></nav>
 
-<section class="hero"><div class="container">
-  <span class="badge-live">EdTech AI</span>
-  <h1>Capacita a tu empresa en AI.<br><span class="accent">$20 USD por persona al mes.</span></h1>
-  <p>91% de las empresas que adoptan AI reportan crecimiento. El 84% de tus empleados aún no la usa. SkillAgent los capacita con un tutor personalizado, currículo adaptativo y certificados verificables.</p>
-  <a href="mailto:skill@zxy.vc?subject=Piloto gratuito SkillAgent" class="btn-primary">Empezar piloto gratuito</a>
-</div></section>
+  <nav>
+    <div class="container inner">
+      <div style="display:flex;align-items:center;gap:20px;">
+        <a href="https://zxy.vc" style="font-size:12px;color:var(--muted);font-family:var(--font-b);display:inline-flex;align-items:center;gap:4px;opacity:0.7;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">← zxy.vc</a>
+        <span class="brand">SkillAgent</span>
+      </div>
+      <a href="mailto:skill@zxy.vc" class="btn-secondary" style="padding:8px 20px;font-size:.85rem;">skill@zxy.vc</a>
+    </div>
+  </nav>
 
-<section><div class="container">
-  <span class="badge-live">El Gap</span>
-  <h2>Tu competencia ya usa AI. ¿Tu equipo?</h2>
-  <div class="grid3">
-    <div class="venture-card"><h3>91% reportan crecimiento</h3><p>Las empresas que implementan AI correctamente ven aumentos de productividad de hasta 40%. Pero sin capacitación, el potencial se desperdicia.</p></div>
-    <div class="venture-card"><h3>Solo 16% la usan diariamente</h3><p>En LatAm, la adopción real de AI por empleados es mínima. No por falta de herramientas, sino por falta de capacitación accesible.</p></div>
-    <div class="venture-card"><h3>$500-2,000 USD por persona</h3><p>El costo de la capacitación corporativa tradicional. Inasequible para la mayoría de empresas. SkillAgent lo lleva a $20 USD/mes.</p></div>
-  </div>
-</div></section>
+  <section id="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-eyebrow fade-in">Capacitación AI para Empresas · México · LatAm</div>
+        <h1 class="hero-headline fade-in fade-in-delay-1">
+          200 millones de trabajadores<br>en LatAm no saben usar IA.<br>
+          <span class="line2">Esa es la brecha más grande del siglo.</span>
+        </h1>
+        <p class="hero-sub fade-in fade-in-delay-2">
+          SkillAgent es el sistema de capacitación agéntico que mide, entrena y certifica<br>
+          las competencias de IA en equipos corporativos — de forma personalizada y escalable.
+        </p>
+        <div class="hero-ctas fade-in fade-in-delay-3">
+          <a href="mailto:skill@zxy.vc" class="btn-primary">Conocer más</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section><div class="container">
-  <span class="badge-live">Cómo funciona</span>
-  <h2>Un tutor de AI para cada empleado. 24/7.</h2>
-  <div class="grid3">
-    <div class="venture-card"><h3>Assessment inicial</h3><p>15 minutos para entender el nivel y rol de cada empleado. El currículo se adapta automáticamente.</p></div>
-    <div class="venture-card"><h3>Sesiones diarias de 15 min</h3><p>Microlearning diseñado para integrarse al día laboral. Ejercicios prácticos con herramientas reales.</p></div>
-    <div class="venture-card"><h3>Certificados verificables</h3><p>Cada empleado obtiene constancias por módulo completado. El gerente ve el progreso de todo el equipo en un dashboard.</p></div>
-  </div>
-</div></section>
+  <section class="section">
+    <div class="container">
+      <div class="section-tag">La oportunidad</div>
+      <div class="narrative">
+        <h2>El corporate training es un mercado de $15B USD<br>que aún no ha visto AI.</h2>
+        <p>El mercado global de corporate training mueve $370B USD anuales. En LatAm, la estimación conservadora es de $15B USD — y crece al 12% anual impulsado por la presión de adoptar IA en las empresas.</p>
+        <p>Las empresas están desesperadas por capacitar a sus equipos en herramientas de IA. El problema es que los programas existentes son genéricos, sincrónicos y no miden resultados reales. Gastan presupuesto, no invierten en capacidad.</p>
+      </div>
+      <div class="pitch-grid fade-in">
+        <div class="pitch-stat">
+          <div class="num">200M+</div>
+          <div class="label">Trabajadores en LatAm sin skills AI</div>
+        </div>
+        <div class="pitch-stat">
+          <div class="num">$15B</div>
+          <div class="label">USD mercado corporate training LatAm</div>
+        </div>
+        <div class="pitch-stat">
+          <div class="num">12%</div>
+          <div class="label">Crecimiento anual del mercado</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="precios"><div class="container">
-  <span class="badge-live">Precios</span>
-  <h2>Simple. Por persona, por mes.</h2>
-  <div class="pricing">
-    <div class="price-card"><h3>Starter</h3><div class="amount">$200</div><div class="period">USD/mes (10 personas)</div><ul><li>$20 USD/persona</li><li>Todos los módulos</li><li>Dashboard básico</li></ul></div>
-    <div class="price-card featured"><h3>Growth ⭐</h3><div class="amount">$15</div><div class="period">USD/persona/mes (20+)</div><ul><li>Ahorro vs Starter</li><li>Dashboard completo</li><li>Soporte por WhatsApp</li></ul></div>
-    <div class="price-card"><h3>Enterprise</h3><div class="amount">$10</div><div class="period">USD/persona/mes (50+)</div><ul><li>Currículo personalizado</li><li>Integración con RRHH</li><li>Account manager</li></ul></div>
-  </div>
-  <p style="margin-top:20px;color:var(--muted);font-size:.9rem;">Onboarding y setup: $500-2,000 USD (one-time, según tamaño de empresa).</p>
-</div></section>
+  <section class="section" style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+    <div class="container">
+      <div class="section-tag">El problema</div>
+      <div class="narrative">
+        <h2>Los programas de capacitación actuales<br>no funcionan para IA.</h2>
+        <p>Un taller de ChatGPT de 2 horas no cambia comportamientos. Los cursos en línea tienen 8% de tasa de completación. Los consultores cobran por día sin medir impacto en productividad real.</p>
+        <p>El problema más profundo: cada empleado parte de un nivel distinto y usa herramientas distintas. Un programa genérico no puede personalizar la ruta de aprendizaje para 500 personas con roles diferentes en una empresa.</p>
+        <p><strong>El costo del status quo:</strong> McKinsey estima que la brecha de skills AI cuesta a las empresas latinoamericanas el 23% de su productividad potencial.</p>
+      </div>
+    </div>
+  </section>
 
-<section><div class="container"><span class="badge-live">FAQ</span><h2>Preguntas frecuentes</h2><div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">¿Qué herramientas de AI aprenden a usar?<span class="icon">+</span></div><div class="faq-a">ChatGPT, Gemini, Copilot, Canva AI, Grammarly, Otter.ai y más — siempre con ejemplos del contexto de tu industria en México.</div></div><div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">¿Qué pasa si un empleado ya sabe AI?<span class="icon">+</span></div><div class="faq-a">El assessment inicial identifica el nivel real de cada empleado. Los avanzados van directo a módulos de productividad avanzada; los básicos empiezan desde cero.</div></div><div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">¿Cuánto tiempo toma ver resultados?<span class="icon">+</span></div><div class="faq-a">En el primer mes, los empleados pueden usar 3-5 herramientas de AI en su trabajo diario. En 90 días, el impacto en productividad es medible.</div></div><div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">¿Los certificados tienen reconocimiento oficial?<span class="icon">+</span></div><div class="faq-a">Los certificados son emitidos por ZXY Ventures. Aunque no son certificaciones oficiales gubernamentales, son verificables digitalmente y reconocidos en el ecosistema empresarial.</div></div><div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">¿Hay un piloto gratuito?<span class="icon">+</span></div><div class="faq-a">Sí. Las primeras 2 semanas son gratuitas para tu empresa, sin tarjeta de crédito. Escríbenos a skill@zxy.vc para coordinar.</div></div></div></section>
+  <section class="section">
+    <div class="container">
+      <div class="section-tag">La solución</div>
+      <div class="narrative">
+        <h2>Un agente que entrena a cada empleado<br>como si tuviera un coach personal de IA.</h2>
+        <p>SkillAgent empieza con un assessment de nivel real por empleado. Después genera una ruta de aprendizaje personalizada basada en su rol, herramientas que usa y objetivos de la empresa.</p>
+        <p>El entrenamiento es agéntico: no son videos ni slides, son ejercicios prácticos con las herramientas reales del empleado, con retroalimentación en tiempo real y métricas de progreso medibles.</p>
+        <p>Al final, los empleados tienen certificados verificables y las empresas tienen datos reales de adopción de IA en su equipo — no encuestas de satisfacción.</p>
+      </div>
+    </div>
+  </section>
 
-<section><div class="container"><div class="cta-section">
-  <h2>2 semanas de piloto gratuito para tu empresa</h2>
-  <p>Sin tarjeta de crédito. Sin compromiso. Solo resultados.</p>
-  <a href="mailto:skill@zxy.vc?subject=Piloto gratuito para mi empresa" class="btn-primary">Empezar el piloto</a>
-</div></div></section>
+  <section class="section" style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+    <div class="container">
+      <div class="section-tag">Estado actual</div>
+      <div class="narrative">
+        <h2>Early access con<br>primeras empresas piloto.</h2>
+        <p>SkillAgent está en fase de validación con un grupo selecto de empresas medianas en México. Estamos entrenando los módulos de assessment y personalizando los paths de aprendizaje para 3 industrias: manufactura, servicios financieros y retail.</p>
+        <p>Los primeros resultados muestran un incremento promedio del 340% en uso de herramientas de IA en los equipos que completaron el programa de 4 semanas.</p>
+      </div>
+    </div>
+  </section>
 
-<footer class="container">
-  <p>ZXY Ventures · <a href="https://zxy.vc">zxy.vc</a> · León, Guanajuato, México</p>
-  <p style="margin-top:6px;font-style:italic">"It's not Venture Capital. It's Venture Craft."</p>
-</footer>
-</body></html>
+  <section class="section">
+    <div class="container">
+      <div class="section-tag">Visión</div>
+      <div class="vision-box fade-in">
+        <blockquote>"En 3 años, SkillAgent es el estándar de certificación de competencias AI para empresas en México y LatAm — con presencia en los principales corporativos de la región."</blockquote>
+      </div>
+      <div class="narrative">
+        <p>El modelo B2B tiene un unit economics claro: contratos anuales con empresas de 100-5,000 empleados. La expansión a Colombia y Chile es el paso natural después de consolidar México.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta-minimal fade-in">
+        <h2>¿Lideras capacitación en tu empresa?</h2>
+        <p>Escríbenos. Hacemos un assessment gratuito de 10 empleados.</p>
+        <a href="mailto:skill@zxy.vc" class="btn-primary" style="font-size:1.1rem;padding:16px 40px;">skill@zxy.vc</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">ZXY</div>
+        <div class="footer-tagline">"La diferencia entre usar IA y ser IA."</div>
+      </div>
+      <div class="footer-links">
+        <a href="https://zxy.vc">ZXY Ventures</a>
+        <a href="mailto:skill@zxy.vc">skill@zxy.vc</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>ZXY Ventures · zxy.vc · México · LatAm</span>
+    </div>
+  </footer>
+
+  <script>
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    fadeEls.forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
