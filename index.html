@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script>
+    (function(){
+      var t=localStorage.getItem('zxy-theme');
+      document.documentElement.setAttribute('data-theme',
+        t||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));
+    })();
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SkillAgent — Capacitación AI para Equipos en LatAm | ZXY Ventures</title>
@@ -24,20 +34,27 @@
     .cta-minimal p{color:var(--muted);margin-bottom:32px}
     @media(max-width:640px){.pitch-grid{grid-template-columns:1fr}.pitch-stat .num{font-size:40px}}
   </style>
+</head>
+<body>
   <nav>
     <div class="container inner">
       <div style="display:flex;align-items:center;gap:20px;">
         <a href="https://zxy.vc" style="font-size:12px;color:var(--muted);font-family:var(--font-b);display:inline-flex;align-items:center;gap:4px;opacity:0.7;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">← zxy.vc</a>
         <span class="brand">SkillAgent</span>
       </div>
+      
       <a href="mailto:skill@zxy.vc" class="btn-secondary" style="padding:8px 20px;font-size:.85rem;">skill@zxy.vc</a>
+      <div class="nav-controls">
+        <button class="lang-toggle" aria-label="Switch language">ES</button>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch theme"></button>
+      </div>
     </div>
   </nav>
 
   <section id="hero">
     <div class="container">
       <div class="hero-inner">
-        <div class="hero-eyebrow fade-in">Capacitación AI para Equipos · México · LatAm</div>
+        <div class="hero-eyebrow fade-in" data-es="Capacitación AI para Equipos · México · LatAm" data-en="AI Training for Teams · Mexico · LatAm">Capacitación AI para Equipos · México · LatAm</div>
         <h1 class="hero-headline fade-in fade-in-delay-1">
           El 91% de las PyMEs que adoptan AI<br>reportan aumento de ingresos.<br>
           <span class="line2">Solo el 16% de sus empleados la usan.</span>
@@ -47,7 +64,7 @@
           currículo personalizado por rol, ejemplos de PyMEs mexicanas reales, certificados verificables.
         </p>
         <div class="hero-ctas fade-in fade-in-delay-3">
-          <a href="mailto:skill@zxy.vc" class="btn-primary">Conocer más</a>
+          <a href="mailto:skill@zxy.vc" class="btn-primary" data-es="Conocer más" data-en="Learn More">Conocer más</a>
         </div>
       </div>
     </div>
@@ -55,7 +72,7 @@
 
   <section class="section">
     <div class="container">
-      <div class="section-tag">La oportunidad</div>
+      <div class="section-tag" data-es="La oportunidad" data-en="The Opportunity">La oportunidad</div>
       <div class="narrative">
         <h2>$1.2B USD en México.<br>$7.3B en LatAm. Sin un líder.</h2>
         <p>El mercado de corporate training en México es de $1.2B USD y crece impulsado por la urgencia de adoptar IA en los equipos de trabajo. En LatAm la cifra llega a $7.3B USD — y no hay ningún jugador dominante en capacitación AI con contexto local.</p>
@@ -80,7 +97,7 @@
 
   <section class="section" style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
     <div class="container">
-      <div class="section-tag">El problema</div>
+      <div class="section-tag" data-es="El problema" data-en="The Problem">El problema</div>
       <div class="narrative">
         <h2>Las soluciones actuales de capacitación<br>no funcionan para el contexto LatAm.</h2>
         <p>La capacitación corporativa en AI existente cuesta $2,000 USD por persona o más. Sin personalización, sin contexto local, sin ejemplos de cómo ChatGPT aplica en una empresa de manufactura en Monterrey o un restaurante en Bogotá.</p>
@@ -91,7 +108,7 @@
   </section>
   <section class="section">
     <div class="container">
-      <div class="section-tag">La solución</div>
+      <div class="section-tag" data-es="La solución" data-en="The Solution">La solución</div>
       <div class="narrative">
         <h2>Un agente que entrena a cada empleado<br>como si tuviera un coach personal de IA.</h2>
         <p>SkillAgent empieza con un diagnóstico de 15 minutos que evalúa el nivel real de cada empleado. Después genera un currículo personalizado por rol y nivel — no el mismo programa para todos.</p>
@@ -102,7 +119,7 @@
   </section>
   <section class="section" style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
     <div class="container">
-      <div class="section-tag">Estado actual</div>
+      <div class="section-tag" data-es="Estado actual" data-en="Current Status">Estado actual</div>
       <div class="narrative">
         <h2>Early access con<br>primeras empresas piloto.</h2>
         <p>SkillAgent está en fase de validación con empresas medianas en México. Estamos entrenando los módulos de assessment y personalizando los paths de aprendizaje para manufactura, servicios financieros y retail — los 3 sectores donde la adopción de AI tiene mayor impacto medible en productividad.</p>
@@ -111,7 +128,7 @@
   </section>
   <section class="section">
     <div class="container">
-      <div class="section-tag">Visión</div>
+      <div class="section-tag" data-es="Visión" data-en="Vision">Visión</div>
       <div class="vision-box fade-in">
         <blockquote>"En 3 años, SkillAgent es el estándar de certificación de competencias AI para equipos en México y LatAm — presente en los principales corporativos de la región."</blockquote>
       </div>
@@ -120,8 +137,8 @@
   <section class="section">
     <div class="container">
       <div class="cta-minimal fade-in">
-        <h2>¿Lideras una empresa en LatAm?</h2>
-        <p>Escríbenos. Hacemos un diagnóstico gratuito de 10 empleados.</p>
+        <h2 data-es="¿Lideras una empresa en LatAm?" data-en="Do you lead a company in LatAm?">¿Lideras una empresa en LatAm?</h2>
+        <p data-es="Escríbenos. Hacemos un diagnóstico gratuito de 10 empleados." data-en="Write to us. We do a free diagnostic for 10 employees.">Escríbenos. Hacemos un diagnóstico gratuito de 10 empleados.</p>
         <a href="mailto:skill@zxy.vc" class="btn-primary" style="font-size:1.1rem;padding:16px 40px;">skill@zxy.vc</a>
       </div>
     </div>
@@ -130,21 +147,15 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <div class="footer-logo">ZXY</div>
-        <div class="footer-tagline">"La diferencia entre usar IA y ser IA."</div>
+        <div class="footer-tagline" data-es=""La diferencia entre usar IA y ser IA."" data-en=""The difference between using AI and being AI."">"La diferencia entre usar IA y ser IA."</div>
       </div>
       <div class="footer-links">
         <a href="https://zxy.vc">ZXY Ventures</a>
         <a href="mailto:skill@zxy.vc">skill@zxy.vc</a>
       </div>
     </div>
-    <div class="footer-bottom"><span>ZXY Ventures · zxy.vc · México · LatAm</span></div>
+    <div class="footer-bottom"><span data-es="ZXY Ventures · zxy.vc · México · LatAm" data-en="ZXY Ventures · zxy.vc · Mexico · LatAm">ZXY Ventures · zxy.vc · México · LatAm</span></div>
   </footer>
-  <script>
-    const fadeEls = document.querySelectorAll('.fade-in');
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-    }, { threshold: 0.1 });
-    fadeEls.forEach(el => io.observe(el));
-  </script>
+  <script src="landing.js"></script>
 </body>
 </html>
