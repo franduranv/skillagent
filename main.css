@@ -979,3 +979,29 @@ footer {
 .footer-links a { font-size: 13px; color: var(--text2); text-decoration: none; transition: color 0.2s; }
 .footer-links a:hover { color: var(--text); }
 .footer-bottom { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); text-align: center; }
+
+/* ── Venture badges ── */
+.venture-badge {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  border: 1px solid currentColor;
+  border-radius: 3px;
+  padding: 1px 5px;
+  vertical-align: middle;
+  margin-left: 6px;
+  text-transform: uppercase;
+  font-family: var(--font-b, sans-serif);
+  white-space: nowrap;
+}
+.badge-lab     { color: #f59e0b; }
+.badge-spinout { color: #22c55e; }
+.badge-partner { color: #3b82f6; }
+/* Affiliation line */
+.venture-affiliation {
+  font-size: 11px;
+  color: var(--muted, #888);
+  letter-spacing: .04em;
+  margin-top: 6px;
+  display: block;
+}
