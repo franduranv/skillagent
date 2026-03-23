@@ -1005,3 +1005,31 @@ footer {
   margin-top: 6px;
   display: block;
 }
+
+/* ── Light mode text readability ── */
+[data-theme="light"] body { color: #111; }
+[data-theme="light"] .hero-headline { color: #111 !important; }
+[data-theme="light"] .hero-sub { color: #333 !important; }
+[data-theme="light"] .hero-eyebrow { color: #555 !important; }
+[data-theme="light"] .section-tag { color: #777 !important; }
+[data-theme="light"] .section-tag::after { background: #ccc !important; }
+[data-theme="light"] h2 { color: #111 !important; }
+[data-theme="light"] p { color: #333 !important; }
+[data-theme="light"] .narrative h2 { color: #111 !important; }
+[data-theme="light"] .narrative p { color: #444 !important; }
+[data-theme="light"] .pitch-stat .num { color: #111 !important; }
+[data-theme="light"] .pitch-stat .label { color: #666 !important; }
+[data-theme="light"] .vision-box { background: #f5f5f5 !important; border-color: #ddd !important; }
+[data-theme="light"] .vision-box blockquote { color: #111 !important; }
+[data-theme="light"] .btn-primary { background: #111 !important; color: #fff !important; }
+[data-theme="light"] .btn-secondary { border-color: #555 !important; color: #333 !important; }
+[data-theme="light"] .cta-minimal h2 { color: #111 !important; }
+[data-theme="light"] .cta-minimal p { color: #555 !important; }
+[data-theme="light"] .section { background: #fff; }
+[data-theme="light"] section[style*="background:var(--bg2)"],
+[data-theme="light"] .section-alt { background: #f5f5f5 !important; border-color: #e5e5e5 !important; }
+[data-theme="light"] .footer-inner { border-color: #e5e5e5 !important; }
+[data-theme="light"] .footer-bottom { color: #888 !important; }
+[data-theme="light"] .venture-affiliation { color: #888 !important; }
+[data-theme="light"] .hero-inner { color: #111; }
+[data-theme="light"] .line2 { color: #333 !important; }
